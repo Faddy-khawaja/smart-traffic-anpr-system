@@ -101,8 +101,8 @@ if not cap.isOpened():
     raise FileNotFoundError(f"Video not found: {VIDEO_PATH}")
 
 fps = cap.get(cv2.CAP_PROP_FPS) or 25
-frame_w = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-frame_h = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+frame_w = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)) // 2
+frame_h = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)) // 2
 out_writer = cv2.VideoWriter(
     OUTPUT_VIDEO_PATH, cv2.VideoWriter_fourcc(*"mp4v"), fps, (frame_w, frame_h)
 )
@@ -189,7 +189,8 @@ while cap.isOpened():
                     cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 0), 2)
         y_offset += 30
 
-    out_writer.write(annotated_frame)
+    resized_frame = cv2.resize(annotated_frame, (frame_w, frame_h))
+out_writer.write(resized_frame)
 
 cap.release()
 out_writer.release()
