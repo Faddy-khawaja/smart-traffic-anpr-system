@@ -16,7 +16,9 @@ AI-powered smart city traffic monitoring system using YOLOv8 for vehicle detecti
 
 Watch the system in action — vehicle detection, tracking, line-crossing counting, and automatic license plate recognition:
 
-Video: demo/traffic-anpr-detection-demo.mp4
+## Demo Video
+
+https://github.com/user-attachments/assets/63b72f52-9a12-4473-b25d-a1ac0b7bd599
 
 This demo shows:
 - Real-time vehicle detection and tracking (YOLOv8 + ByteTrack)
