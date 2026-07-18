@@ -16,7 +16,7 @@ AI-powered smart city traffic monitoring system using YOLOv8 for vehicle detecti
 
 Watch the system in action — vehicle detection, tracking, line-crossing counting, and automatic license plate recognition:
 
-📹 [`demo/traffic-anpr-detection-demo.mp4`](demo/traffic-anpr-detection-demo.mp4)
+Video: demo/traffic-anpr-detection-demo.mp4
 
 This demo shows:
 - Real-time vehicle detection and tracking (YOLOv8 + ByteTrack)
@@ -29,4 +29,8 @@ This demo shows:
 
 Python, OpenCV, YOLOv8, ByteTrack, EasyOCR, SQLite, Streamlit
 
-## Project Structure
+## How to Run
+
+1. Install dependencies: pip install -r requirements.txt
+2. Run the full pipeline: python src/anpr_pipeline.py
+3. Launch the dashboard: streamlit run app/streamlit_app.py
